@@ -1,1 +1,29 @@
  /* CSS */
+ body {
+    /* grid opzet */
+    display: grid;
+    grid-template-areas:
+    "nav header"
+    "nav main"
+    "nav footer";
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 10fr 9fr;
+    gap: 1em;
+    /* grid opzet */
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
