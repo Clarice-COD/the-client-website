@@ -1,29 +1,68 @@
  /* CSS */
  body {
-    /* grid opzet */
-    display: grid;
-    grid-template-areas:
-    "nav header"
-    "nav main"
-    "nav footer";
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 10fr 9fr;
-    gap: 1em;
-    /* grid opzet */
-  }
+   /* grid opzet */
+   display: grid;
+   grid-template-areas:
+     "nav header"
+     "nav main"
+     "nav footer";
+   grid-template-columns: 1fr 5fr;
+   grid-template-rows: 1fr 10fr 9fr;
+   gap: 1em;
+   /* grid opzet */
+ }
 
-  header {
-    grid-area: header;
-  }
+ header {
+   grid-area: header;
+ }
 
-  nav {
-    grid-area: nav;
-  }
+ .mobiele-nav {
+   grid-area: nav;
+   background-color: #567046;
 
-  main {
-    grid-area: main;
-  }
+   /* bewerkt alleen de afbeeldingen binnen deze nav */
+   & img {
+     width: 4rem;
+   }
+ }
 
-  footer {
-    grid-area: footer;
-  }
+ .desktop-nav {
+   display: none;
+   background-color: #567046;
+ }
+
+
+ main {
+   grid-area: main;
+ }
+
+ footer {
+   grid-area: footer;
+ }
+
+
+ .boek {
+   width: 75%;
+ }
+
+ .plant {
+   position: sticky;
+   width: 40%;
+ }
+
+ footer {
+   background-color: #6D4C33;
+ }
+
+ /* responsive nav */
+ @media (min-width: 855px) {
+   .mobiele-nav {
+     display: none;
+   }
+
+   .desktop-nav {
+     display: grid;
+     grid-area: nav;
+     background-color: #567046;
+   }
+ }
