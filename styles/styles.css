@@ -16,9 +16,24 @@
    grid-area: header;
  }
 
+
+ 
  .mobiele-nav {
+  position: fixed;
+  width: 15vw;
+  top: 1vh;
    grid-area: nav;
    background-color: #567046;
+   height: 95vh;
+   border-radius: 5px;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+   & a {
+      font-size: 0px;
+   }
 
    /* bewerkt alleen de afbeeldingen binnen deze nav */
    & img {
@@ -26,9 +41,23 @@
    }
  }
 
+ .logo{
+  margin-top: 10px;
+  height: 2.5rem;
+ }
+
+.harry{
+  margin-bottom: 5px;;
+}
+
+
  .desktop-nav {
+  position: sticky;
+    top: 20px;
    display: none;
    background-color: #567046;
+   height: 98vh;
+  border-radius: 5px;
  }
 
 
@@ -46,7 +75,6 @@
  }
 
  .plant {
-   position: sticky;
    width: 40%;
  }
 
@@ -56,13 +84,16 @@
 
  /* responsive nav */
  @media (min-width: 855px) {
-   .mobiele-nav {
-     display: none;
-   }
 
-   .desktop-nav {
-     display: grid;
-     grid-area: nav;
-     background-color: #567046;
+   .mobiele-nav {
+    width: 30vw;
+ 
+     & a {
+      font-size: 1em;
+      display: block;
+      color: white;
+      text-decoration: none;
    }
+   }
+   
  }
