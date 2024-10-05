@@ -8,15 +8,13 @@
      "nav footer";
    grid-template-columns: 1fr 5fr;
    grid-template-rows: 1fr 10fr 9fr;
-   gap: 1em;
+   gap: 0.5rem;
    /* grid opzet */
  }
 
  header {
    grid-area: header;
  }
-
-
  
  .mobiele-nav {
   position: fixed;
@@ -24,7 +22,7 @@
   top: 1vh;
    grid-area: nav;
    background-color: #567046;
-   height: 95vh;
+   height: 98vh;
    border-radius: 5px;
    display:flex;
    flex-direction: column;
@@ -33,12 +31,23 @@
 
    & a {
       font-size: 0px;
+      /* margin-bottom: 1rem; */
    }
 
    /* bewerkt alleen de afbeeldingen binnen deze nav */
-   & img {
-     width: 4rem;
+
+   & article{
+    width: min-content;
    }
+ }
+
+ .iconen {
+    width: 2rem;
+    margin-bottom: 2rem;
+ }
+
+ .harry {
+  width:4rem;
  }
 
  .logo{
@@ -79,7 +88,30 @@
  }
 
  footer {
+  border-radius: 5px;
    background-color: #6D4C33;
+   margin-right:0.5rem;
+   height: 35rem;
+   display:flex;
+   flex-direction: column;
+  
+
+   & h2{
+    color: #F8E9C2;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-size:24px;
+   }
+
+   & p{
+    color: #F8E9C2;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size:16px;
+    line-height: 1.4;
+    max-width: 30rem;
+   }
  }
 
  /* responsive nav */
@@ -94,6 +126,15 @@
       color: white;
       text-decoration: none;
    }
+
+   & article{
+    width: max-content;
+   }
+
    }
    
  }
+
+.element {
+  
+}
