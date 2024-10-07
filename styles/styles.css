@@ -157,6 +157,15 @@
        margin-bottom: 2rem;
      }
    }
+
+   header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 17%;
+  }
+
  }
 
 
