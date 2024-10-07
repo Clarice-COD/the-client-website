@@ -9,137 +9,120 @@
    grid-template-columns: 1fr 5fr;
    grid-template-rows: 1fr 10fr 9fr;
    gap: 0.5rem;
-   /* grid opzet */
+   /* verdere opmaak */
    background-color: #F8E9C2;
  }
 
  header {
    grid-area: header;
-   display:flex;
+   display: flex;
    flex-direction: row;
    justify-content: space-between;
  }
 
- h1{
-  font-size: 2.5rem;
-  margin-top:0;
-  color: #6D4C33;
+ h1 {
+   font-size: 2.5rem;
+   margin-top: 0;
+   color: #6D4C33;
  }
 
- input{
-  background-color: #6D4C33;
-  width: 100%;
-  height: 1.5rem;
-  border-radius: 5px;
-  margin-top:0.5rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-  border: none;
-  color: #F8E9C2;
+ input {
+   background-color: #6D4C33;
+   width: 100%;
+   height: 1.5rem;
+   border-radius: 5px;
+   margin: 0.5rem;
+   margin-bottom: 0;
+   border: none;
+   color: #F8E9C2;
  }
 
-
- 
  .mobiele-nav {
-  position: fixed;
-  width: 15vw;
-  top: 1vh;
+   position: fixed;
+   width: 15vw;
+   top: 1vh;
    grid-area: nav;
    background-color: #567046;
    height: 98vh;
    border-radius: 5px;
-   display:flex;
+   display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
 
+   /* & bewerkt alleen de elementen binnen deze nav */
    & a {
-      font-size: 0px;
-      /* margin-bottom: 1rem; */
+     font-size: 0px;
+     display: flex;
+     margin-bottom: 2.5rem;
    }
 
-   /* bewerkt alleen de afbeeldingen binnen deze nav */
-
-   & article{
-    width: min-content;
+   & article {
+     width: min-content;
    }
  }
 
  .iconen {
-    width: 2rem;
-    margin-bottom: 2rem;
+   width: 2rem;
  }
 
  .harry {
-  width:4rem;
+   width: 4rem;
  }
 
- .logo{
-  margin-top: 10px;
-  height: 2.5rem;
+
+ .logo {
+   margin-top: 10px;
+   height: 2.5rem;
  }
 
-.harry{
-  margin-bottom: 5px;;
-}
-
+ .harry {
+   margin-bottom: 5px;
+   ;
+ }
 
  .desktop-nav {
-  position: sticky;
-    top: 20px;
+   position: sticky;
+   top: 20px;
    display: none;
    background-color: #567046;
    height: 98vh;
-  border-radius: 5px;
+   border-radius: 5px;
  }
-
 
  main {
    grid-area: main;
    background-image: url(bg-image.png);
+   background-image: url(file:///Users/clariceboerlijst/Documents/FDND/week%202/the-client-website/assets/BG/bg-image.png);
+   margin-right: 0.5rem;
+   border-radius: 5px;
+   margin-top: -2rem;
  }
 
  footer {
-   grid-area: footer;
- }
-
-
- .boek {
-   width: 75%;
- }
-
- .plant {
-  display: float;
-   width: 40%;
-   background-image: url(assets/BOOK/BOEK.png);
-    position: absolute;
-    
- }
-
- footer {
-  border-radius: 5px;
+   border-radius: 5px;
    background-color: #6D4C33;
-   margin-right:0.5rem;
+   margin-right: 0.5rem;
    height: 35rem;
-   display:flex;
+   display: grid;
    flex-direction: column;
-  
+   grid-area: footer;
 
-   & h2{
-    color: #F8E9C2;
-    margin-left: 1rem;
-    margin-top: 2rem;
-    font-size:24px;
+   & h2 {
+     color: #F8E9C2;
+     margin-left: 1rem;
+     margin-top: 2rem;
+     font-size: 24px;
    }
 
-   & p{
-    color: #F8E9C2;
-    margin-top: -0.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size:16px;
-    line-height: 1.4;
-    max-width: 30rem;
+   & p {
+     color: #F8E9C2;
+     margin-top: -0.5rem;
+     margin-left: 1rem;
+     margin-right: 1rem;
+     font-size: 16px;
+     line-height: 1.4;
+     max-width: 30rem;
    }
  }
 
@@ -147,23 +130,48 @@
  @media (min-width: 855px) {
 
    .mobiele-nav {
-    width: 30vw;
- 
+     width: 30vw;
+
      & a {
-      font-size: 1em;
-      display: block;
-      color: white;
-      text-decoration: none;
-   }
+       font-size: 1em;
+       display: flex;
+       color: white;
+       text-decoration: none;
+       gap: 1rem;
+       align-items: center;
+       margin-bottom: 2.5rem;
+     }
 
-   & article{
-    width: max-content;
-   }
+     & article {
+       width: max-content;
+     }
 
+     .harry {
+       width: 10rem;
+       margin-bottom: 1rem;
+     }
+
+     .logo {
+       height: 5rem;
+       margin-top: 2rem;
+       margin-bottom: 2rem;
+     }
    }
-   
  }
 
-.element {
-  
-}
+
+ .container {
+   position: relative;
+ }
+
+ .boek {
+   width: 75%;
+ }
+
+ .plant {
+   width: 40%;
+   position: absolute;
+   left: 4.8rem;
+   border-radius: 5px;
+   margin-top: 1rem;
+ }
