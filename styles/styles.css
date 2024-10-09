@@ -111,7 +111,7 @@
 
  main {
    grid-area: main;
-   display: flex;
+   display: grid;
    justify-content: center;
    align-items: center;
 
@@ -122,9 +122,9 @@
 
  .plantgroups{
   position: relative;
-  display: flex;
-  justify-content: center;
-  grid-row: 2;
+    display: flex;
+    justify-content: center;
+    grid-row: 1;
  }
 
  .background-image{
@@ -206,6 +206,12 @@
     justify-content: space-between;
     margin-left: 18%;
   }
+
+  .background-image{
+    margin-right: 0.5rem;
+     border-radius: 5px;
+     margin-top: -2rem;
+   }
 
   main {
     /* grid-area: main;
