@@ -122,14 +122,22 @@
 
  .plantgroups{
   position: relative;
+  display: flex;
+  justify-content: center;
+  grid-row: 2;
  }
 
- /* .background-image{
+ .background-image{
   margin-right: 0.5rem;
    border-radius: 5px;
    margin-top: -2rem;
- } */
+ }
 
+ /* dit moet de bg image worden, vanwegen de lay-out */
+ .products{
+  background-image: url(../assets/BG/bg-image.png);
+  display:grid;
+ }
  
  footer {
    border-radius: 5px;
