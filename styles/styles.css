@@ -6,8 +6,8 @@
      "nav header"
      "nav main"
      "nav footer";
-   grid-template-columns: 1fr 5fr;
-   grid-template-rows: 3rem 10fr 9fr;
+     grid-template-columns: 0.9fr 5fr;
+     grid-template-rows: 2.3rem 10fr 9fr;
    gap: 0.5rem;
    /* verdere opmaak */
    background-color: #F8E9C2;
@@ -20,6 +20,8 @@
    justify-content: space-between;
  }
 
+ /* tekst */
+
  h1 {
    font-size: 2.5rem;
    margin-top: 0;
@@ -31,12 +33,13 @@
    width: 100%;
    height: 1.5rem;
    border-radius: 5px;
-   margin: 0.5rem;
-   margin-bottom: 0;
+   margin-top: 0.5rem;
+   margin-left: 0.5rem;
    border: none;
    color: #F8E9C2;
  }
 
+   /* navigatie */
  .mobiele-nav {
   position: fixed;
    width: 15vw;
@@ -62,21 +65,27 @@
    }
  }
 
+  .logo {
+    margin-top: 10px;
+    height: 2.5rem;
+  }
+ 
+  .harry {
+   width: 4rem;
+    margin-bottom: 5px;
+  }
+
  .iconen {
    width: 2rem;
  }
 
- .plant-scindapsus{
-  align-items: center;
-  background-color: pink;
- }
-
- 
+ /* producten */
 
  .bg-image{
   width: 100%;
   object-fit: cover;
-  height: 93em;
+  height: 47em;
+  border-radius: 5px; 
  }
 
  .plant {
@@ -90,34 +99,11 @@
     position: absolute;
  }
 
- .logo {
-   margin-top: 10px;
-   height: 2.5rem;
- }
-
- .harry {
-  width: 4rem;
-   margin-bottom: 5px;
- }
-
- .desktop-nav {
-   position: sticky;
-   top: 20px;
-   display: none;
-   background-color: #567046;
-   height: 98vh;
-   border-radius: 5px;
- }
-
  main {
    grid-area: main;
    display: grid;
    justify-content: center;
    align-items: center;
-
-   /* margin-right: 0.5rem;
-   border-radius: 5px;
-   margin-top: -2rem; */
  }
 
  .plantgroups{
@@ -125,12 +111,6 @@
     display: flex;
     justify-content: center;
     grid-row: 1;
- }
-
- .background-image{
-  margin-right: 0.5rem;
-   border-radius: 5px;
-   margin-top: -2rem;
  }
 
  /* dit moet de bg image worden, vanwegen de lay-out */
@@ -142,11 +122,11 @@
  footer {
    border-radius: 5px;
    background-color: #6D4C33;
-   margin-right: 0.5rem;
    height: 87%;
    display: flex;
    flex-direction: column;
    grid-area: footer;
+   width: 100%;
 
    & h2 {
      color: #F8E9C2;
@@ -169,8 +149,22 @@
  /* responsive nav */
  @media (min-width: 855px) {
 
+  body {
+    /* grid opzet */
+    display: grid;
+    grid-template-areas:
+      "nav header"
+      "nav main"
+      "nav footer";
+      grid-template-columns: 1.62fr 5fr;
+      grid-template-rows: 2.5rem 10fr 9fr;
+    gap: 0.5rem;
+    /* verdere opmaak */
+    background-color: #F8E9C2;
+  }
+
    .mobiele-nav {
-     width: 30vw;
+     width: 24vw;
      position: fixed;
 
      & a {
@@ -204,21 +198,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 18%;
   }
 
-  .background-image{
-    margin-right: 0.5rem;
-     border-radius: 5px;
-     margin-top: -2rem;
-   }
-
-  main {
-    /* grid-area: main;
-    margin-right: 0.5rem;
-    border-radius: 5px;
-    margin-top: -2rem;
-    margin-left: 18%; */
+  .bg-image{
+    height: 46.8rem;
   }
   
   footer {
@@ -229,7 +212,6 @@
     display: flex;
     flex-direction: row;
     grid-area: footer;
-    margin-left: 18%;
  
     & h2 {
       color: #F8E9C2;
