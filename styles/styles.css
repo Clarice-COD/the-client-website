@@ -7,7 +7,7 @@
      "nav main"
      "nav footer";
    grid-template-columns: 1fr 5fr;
-   grid-template-rows: 1fr 10fr 9fr;
+   grid-template-rows: 3rem 10fr 9fr;
    gap: 0.5rem;
    /* verdere opmaak */
    background-color: #F8E9C2;
@@ -38,7 +38,7 @@
  }
 
  .mobiele-nav {
-   position: fixed;
+  position: fixed;
    width: 15vw;
    top: 1vh;
    grid-area: nav;
@@ -66,10 +66,29 @@
    width: 2rem;
  }
 
- .harry {
-   width: 4rem;
+ .plant-scindapsus{
+  align-items: center;
+  background-color: pink;
  }
 
+ 
+
+ .bg-image{
+  width: 100%;
+  object-fit: cover;
+  height: 93em;
+ }
+
+ .plant {
+  width: 20%;
+  position: absolute;
+  border-radius: 5px;
+}
+
+ .boek{
+  width: 40%;
+    position: absolute;
+ }
 
  .logo {
    margin-top: 10px;
@@ -77,8 +96,8 @@
  }
 
  .harry {
+  width: 4rem;
    margin-bottom: 5px;
-   ;
  }
 
  .desktop-nav {
@@ -92,13 +111,26 @@
 
  main {
    grid-area: main;
-   background-image: url(bg-image.png);
-   background-image: url(file:///Users/clariceboerlijst/Documents/FDND/week%202/the-client-website/assets/BG/bg-image.png);
-   margin-right: 0.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* margin-right: 0.5rem;
    border-radius: 5px;
-   margin-top: -2rem;
+   margin-top: -2rem; */
  }
 
+ .plantgroups{
+  position: relative;
+ }
+
+ /* .background-image{
+  margin-right: 0.5rem;
+   border-radius: 5px;
+   margin-top: -2rem;
+ } */
+
+ 
  footer {
    border-radius: 5px;
    background-color: #6D4C33;
@@ -131,6 +163,7 @@
 
    .mobiele-nav {
      width: 30vw;
+     position: fixed;
 
      & a {
        font-size: 1em;
@@ -163,9 +196,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 17%;
+    margin-left: 18%;
   }
 
+  main {
+    /* grid-area: main;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    margin-top: -2rem;
+    margin-left: 18%; */
+  }
+  
   footer {
     border-radius: 5px;
     background-color: #6D4C33;
@@ -174,7 +215,7 @@
     display: flex;
     flex-direction: row;
     grid-area: footer;
-    margin-left: 17%;
+    margin-left: 18%;
  
     & h2 {
       color: #F8E9C2;
@@ -193,22 +234,4 @@
       max-width: 30rem;
     }
   }
-
- }
-
-
- .container {
-   position: relative;
- }
-
- .boek {
-   width: 75%;
- }
-
- .plant {
-   width: 40%;
-   position: absolute;
-   left: 4.8rem;
-   border-radius: 5px;
-   margin-top: 1rem;
  }
