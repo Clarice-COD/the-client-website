@@ -28,6 +28,12 @@
    color: #6D4C33;
  }
 
+ H3{
+  color: #567046;
+  font-size: 1rem;
+  position: absolute;
+}
+
  input {
    background-color: #6D4C33;
    width: 100%;
@@ -85,18 +91,22 @@
   width: 100%;
   object-fit: cover;
   height: 47em;
-  border-radius: 5px; 
+  border-radius: 5px;
+  margin-top: -45rem;
  }
 
  .plant {
   width: 20%;
   position: absolute;
   border-radius: 5px;
+  margin-top: 0.5rem;
+  max-width: 6rem;
 }
 
  .boek{
   width: 40%;
     position: absolute;
+    max-width: 12rem;
  }
 
  main {
@@ -104,19 +114,63 @@
    display: grid;
    justify-content: center;
    align-items: center;
+   height: 47em;
+  border-radius: 5px;
  }
 
- .plantgroups{
-  position: relative;
+ /* .scindapsus{
+    position: relative;
     display: flex;
     justify-content: center;
     grid-row: 1;
- }
+ } */
+
+
+ /* .scindapsus{
+  position: absolute;
+  justify-content: center;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+} */
+
+.scindapsus{
+  grid-area: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aglaonema{
+  grid-area: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.gynura{
+  grid-area: 3;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+}
 
  /* dit moet de bg image worden, vanwegen de lay-out */
  .products{
   background-image: url(../assets/BG/bg-image.png);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
   display:grid;
+  flex-direction: row;
+  grid-template-areas:
+     "1"
+     "2"
+     "3";
+     grid-template-rows: 1rem 1rem 1rem;
+     gap: 13rem;
+     height: 47em;
+     margin-top: 3rem;
  }
  
  footer {
@@ -177,6 +231,23 @@
        margin-bottom: 2.5rem;
      }
 
+     .products{
+      background-image: url(../assets/BG/bg-image.png);
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+      display:grid;
+      flex-direction: row;
+      grid-template-areas:
+         "1"
+         "2"
+         "3";
+         grid-template-rows: 1rem 1rem 1rem;
+         gap: 13rem;
+         height: 47em;
+         margin-top: 3rem;
+     }
+
      & article {
        width: max-content;
      }
@@ -231,3 +302,17 @@
     }
   }
  }
+
+
+
+     /* background-image: url(../assets/BG/bg-image.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: grid;
+    flex-direction: row;
+    grid-template-areas: "1 2 3";
+    grid-auto-rows: 1rem;
+    grid-template-columns: 1rem 1rem 1rem;
+    gap: 9rem;
+    margin-top: 3rem; */
